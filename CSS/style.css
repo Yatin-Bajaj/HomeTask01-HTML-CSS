@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  
+}
+
+/* Header Style */
+.header {
+    margin: 0;
+    background-color: rgb(7, 34, 68);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+}
+
+.title {
+    background-color: white;
+    color: black;
+    width: 300px;
+    text-align: center;
+    border: 1.5px inset orangered;
+    height: 60%;
+}
+
+.title>h1,
+.title>p {
+    margin: 0;
+}
+
+/* All News section Style */
+
+#all-news-section {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.category-filter{
+    margin: 10px;
+}
+
+.subscribe-form{
+    margin: 10px;
+}
+.all-news-heading{
+    justify-self: center;
+}
+
+
+.subscribe-btn {
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 3px;
+    cursor: pointer;
+}
+
+label{
+    display: block;
+}
+
+.horizontal-rule {
+    border: 1px solid gray;
+    margin-top: 10px;
+
+}
+
+/* News Items */
+.news-item {
+    display: flex;
+}
+
+.item-image{
+    margin-left: 10px;
+}
+
+.item-content{
+    padding: 0 10px;
+}
+
+.item-content>h2 {
+    color: rgb(7, 34, 68);
+}
+
+.item-content > p{
+    text-align: justify;
+}
+.continue-btn {
+    background-color: orangered;
+    border: 1.5px inset grey;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* Footer Style
+------------------- */
+footer {
+    background-color: rgb(7, 34, 68);
+    color: #fff;
+    text-align: center;
+}
+
+
+/* Media Query 
+---------------------- */
+
+@media only screen and (max-width: 600px) {
+    #all-news-section{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .category-filter{
+        order: 2;
+    }
+
+    .all-news-heading{
+        order: 1;
+    }
+
+    .subscribe-form{
+        order: 3;
+    }
+    .news-item {
+        flex-direction: column;
+    }
+
+    .item-content {
+        margin:0 10px;
+        padding: 0;
+    }
+
+    .item-content>h2 {
+        margin-bottom: 0;
+    }
+
+    .item-content>p {
+        margin-top: 0;
+    }
+    
+}
+
+@media (min-width: 601px) and (max-width: 782px){
+    
+    .subscribe-btn{
+        margin-top: 5px;
+    }
+}
